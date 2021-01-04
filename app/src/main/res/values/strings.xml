@@ -1,0 +1,10 @@
+<resources>
+    <string name="app_name">Fibonacci</string>
+    <string name="numero_de_elementos">Numero de Elementos</string>
+    <string name="hint_elementos">0</string>
+    <string name="radio_button_sequencia">Sequencia</string>
+    <string name="radio_button_elemento">Elemento</string>
+    <string name="btn_fibonacci">Fibonacci</string>
+    <string name="info_fibonacci">Digite a quantidade de Elementos da Sequencia, escolha se quer apenas o elemento ou a sequencia inteira, e pressione o botão.</string>
+    <string name="sequencia_elemento">Sequencia: /Elemento:</string>
+</resources>
