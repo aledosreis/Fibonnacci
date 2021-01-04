@@ -30,11 +30,15 @@ public class MainActivity extends AppCompatActivity {
 
         int n1 = 0, n2 = 1, n3;
         int[] arrayFibo = new int [elements];
-        arrayFibo[0] = n1;
-        arrayFibo[1] = n2;
 
-        if(elements > 2) {
-            for (int i = 2; i < elements; i++) {
+        for (int i = 0; i < elements; i++) {
+            if (i == 0) {
+                arrayFibo[0] = n1;
+            }
+            else if (i == 1) {
+                arrayFibo[1] = n2;
+            }
+            else {
                 n3 = n1 + n2;
                 arrayFibo[i] = n3;
                 n1 = n2;
@@ -42,12 +46,14 @@ public class MainActivity extends AppCompatActivity {
             }
         }
 
+
         if(checked == R.id.sequence) {
-            String seqFibo ="";
-            for (int i = 0; i <= arrayFibo.length; i++) {
-                seqFibo += arrayFibo[i] + " ";
+            StringBuilder seqFibo = new StringBuilder();
+            for (int i = 0; i <= arrayFibo.length-1; i++) {
+                String el = String.valueOf(arrayFibo[i]);
+                seqFibo.append(el).append(" ");
             }
-            resultFibo.setText(seqFibo);
+            resultFibo.setText(seqFibo.toString());
         }
         else if (checked == R.id.element) {
             String elemento = String.valueOf(arrayFibo[(elements - 1)]);
